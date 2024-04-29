@@ -1,0 +1,168 @@
+:root {
+    --dark-navy: #242742;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+/* html, body {
+    height: 80%;
+} */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark-navy);
+    font-family: 'Roboto', sans-serif;
+    color: var(--dark-navy);
+}
+
+/* CONTAINER */
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 928px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 2rem;
+    padding: 1.5rem;
+}
+
+.content {
+
+    align-self: center;
+    /* TAMANO DEL ELEMENTO FLEX */
+    flex-basis: 50%; 
+
+    /* DEFINE CUANTO CRECE EN EL ESPACIO */
+
+    flex-grow: 0;
+    padding: 0 2.5rem;
+    margin-bottom: 2rem;
+
+}
+
+.content_title {
+   
+    margin: 0 0 1.5rem 0;
+    font-size: 56px;
+}
+
+.content_subtitle {
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0 0 1.5rem 0;
+}
+
+.content_benefits {
+    list-style: none;
+    padding: 0;
+}
+
+.content_benefits_benefits {
+    margin: 0.5rem 0;
+}
+
+.content_benefits_benefits::before {
+
+    content: url(./images/icon-list.svg);
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: .7rem;
+}
+
+.form {
+   
+    font-size: 12px;
+    margin-top: 2rem;
+}
+
+.form > * {
+    display: block;
+}
+
+.form_label {
+    font-weight: bold;
+    margin-bottom: .5rem;
+}
+
+.form_input-email {
+    width: 100%;
+    padding: .7rem;
+    border-radius: .3rem;
+    margin-bottom: 1rem;
+}
+ 
+.form_input-email:focus {
+    outline: none;
+    border: none;
+} 
+
+.form_submit-button {
+    width: 100%;
+    background-color: var(--dark-navy);
+    color: white;
+    font-weight: bold;
+    padding: .7rem;
+    border-radius: .5rem;
+    border: none;
+    cursor: pointer;
+}
+
+.form_submit-button:hover {
+
+    background: linear-gradient(90deg, #d8a717, #ef5734);
+    color: var(--dark-navy);
+
+
+
+
+}
+
+
+/* ESTO LO HACE UN POCO RESPONSIVE */
+.ilustration_image {
+
+    width: 100%;
+    height: auto;
+}
+
+.ilustration_image-mobile {
+
+    display: none;
+}
+
+/* MOBILE ADAPTATION */
+
+@media screen and (max-width: 873px) {
+    
+    body {
+        align-items: flex-start;
+        
+    }
+    
+    .container {
+        flex-direction: column;
+      border-radius: 0;
+      padding-top: 0;
+      padding-left: 0;
+    padding-right: 0;
+    }
+
+    .ilustration {
+        order: -1;
+    }
+    
+    .ilustration_image {
+        display: none;
+    }
+
+    .ilustration_image-mobile {
+        display: block;
+        width: 100%;
+    }
+}
